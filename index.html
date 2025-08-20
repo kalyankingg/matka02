@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalyan King</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      max-width: 380px;
+      width: 90%;
+      background: linear-gradient(#fdfdfd, #f9f7ef);
+      border: 2px solid #d4af37;
+      border-radius: 14px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 20px;
+    }
+
+    .card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 12px;
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #1a2a6c;
+    }
+
+    .subtitle {
+      margin: 8px 0;
+      font-size: 15px;
+      color: #333;
+    }
+
+    .vip-text {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 12px 0;
+      color: #111;
+    }
+
+    .timer-btn {
+      display: block;
+      background: #ff004f;
+      color: #fff;
+      font-weight: bold;
+      padding: 14px;
+      border-radius: 6px;
+      margin: 12px 0;
+      width: 100%;
+      border: none;
+      cursor: not-allowed;
+      font-size: 14px;
+    }
+
+    .telegram-btn {
+      display: block;
+      background: #1d9bf0;
+      color: #fff;
+      font-weight: bold;
+      padding: 14px;
+      border-radius: 6px;
+      margin: 12px 0;
+      width: 100%;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .footer-text {
+      font-size: 13px;
+      color: #222;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 480px) {
+      .title { font-size: 22px; }
+      .vip-text { font-size: 14px; }
+      .subtitle { font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <img src="bbb.webp" alt="Logo">
+    <div class="title">KALYAN KING</div>
+    <div class="subtitle"><span id="subs">26,301</span> Subscribers</div>
+    <div class="vip-text">All Game VIP Charts Available Here</div>
+
+    <button class="timer-btn" id="countdown">Free Joining Ends In 15 Seconds</button>
+
+    <button class="telegram-btn" id="telegramBtn" onclick="openTelegram()">🚀 JOIN FREE TELEGRAM</button>
+
+    <div class="footer-text">SIRF 3 DIN HAMARE SATH KAAM KARKE DEKHO</div>
+  </div>
+
+  <script>
+    // Countdown timer
+    let timeLeft = 15;
+    const countdownBtn = document.getElementById("countdown");
+    const telegramBtn = document.getElementById("telegramBtn");
+
+    const timer = setInterval(() => {
+      timeLeft--;
+      countdownBtn.textContent = "Free Joining Ends In " + timeLeft + " Seconds";
+      if (timeLeft <= 0) {
+        clearInterval(timer);
+        countdownBtn.textContent = "Offer Expired!";
+        countdownBtn.style.background = "gray";
+        // Auto open Telegram after countdown
+        openTelegram();
+      }
+    }, 1000);
+
+    // Auto increment subscribers
+    let subs = 26301;
+    const subsTarget = 26350;
+    const subsElement = document.getElementById("subs");
+
+    const subsTimer = setInterval(() => {
+      if (subs < subsTarget) {
+        subs++;
+        subsElement.textContent = subs.toLocaleString();
+      } else {
+        clearInterval(subsTimer);
+      }
+    }, 120); // speed of increment
+
+    // Telegram redirect function
+    function openTelegram() {
+      window.location.href = "https://t.me/+P0EUg8tNVyRhMmZl";
+    }
+  </script>
+
+</body>
+</html>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '785743754205180');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=785743754205180&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
